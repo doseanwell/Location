@@ -20,11 +20,13 @@
 
 - sensor data filter.
 
-<img src="https://raw.githubusercontent.com/yyccR/Pictures/master/INS/ornt_filter.png" width="1000" height="800" />
+ <!-- width="1000" height="800"  -->
+<img src="./docs/image/ornt_filter.png"/>
 
 - GPS fusion INS under uncoupling system.
 
-<img src="https://raw.githubusercontent.com/yyccR/Pictures/master/INS/origin location.png" width="390" height="310" /> <img src="https://raw.githubusercontent.com/yyccR/Pictures/master/INS/final location.png" width="390" height="310" />
+ <!-- width="350" height="290"  -->
+<img src="./docs/image/origin location.png"/> <img src="./docs/image/final location.png"/>
 
 ## Quick start
 First make sure gcc and cmake was installed, and include this library into your project.

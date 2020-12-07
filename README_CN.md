@@ -18,11 +18,13 @@
 
 - 传感器噪声过滤与修正.
 
-<img src="https://raw.githubusercontent.com/yyccR/Pictures/master/INS/ornt_filter.png" width="1000" height="800" />
+ <!-- width="1000" height="800"  -->
+<img src="./docs/image/ornt_filter.png"/>
 
 - 基于非耦合的GPS融合INS.
 
-<img src="https://raw.githubusercontent.com/yyccR/Pictures/master/INS/origin location.png" width="350" height="290" /> <img src="https://raw.githubusercontent.com/yyccR/Pictures/master/INS/final location.png" width="350" height="290" />
+ <!-- width="350" height="290"  -->
+<img src="./docs/image/origin location.png"/> <img src="./docs/image/final location.png"/>
 
 ## 快速开始
 确保安装了gcc和cmake, 下载本项目到你的项目下
