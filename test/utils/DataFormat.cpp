@@ -120,7 +120,7 @@ void DataFormat::readCSV(std::string file_name, MatrixXd &gyro, MatrixXd &acc, M
     cout << "read file: " << file_name << endl;
     infile.open(file_name, ios::in);
     assert(infile.is_open());
-    printf("Here 0\n");
+
     string s;
     int    i = 0;
     while (getline(infile, s)) {

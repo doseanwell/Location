@@ -104,6 +104,7 @@ void Location::PredictCurrentPosition(Vector3d &gyro_data, Vector3d &acc_data, V
     // 判断是否采用GPS数据
     bool is_gps_valid                      = gps.IsGPSValid(&status, &gps_data);
     status.parameters.is_current_gps_valid = is_gps_valid;
+    std::cout << "is_gps_valid is:" << is_gps_valid << std::endl;
     if (!is_gps_valid) {
 
         // 采用惯导更新经纬度
@@ -141,6 +142,7 @@ void Location::PredictCurrentPosition(Vector3d &gyro_data, Vector3d &acc_data, V
         if (is_ins_move_not_too_far) {
             // 计算航向角
             Vector2d gps_new = gps.CalDestination(start_lng, start_lat, distance, heading);
+            // std::cout << "Current predict result: lng " << gps_new(0) << ", lat " << gps_new(1) << std::endl;
             // 更新经纬度
             status.position.lng = gps_new(0);
             status.position.lat = gps_new(1);
@@ -150,6 +152,7 @@ void Location::PredictCurrentPosition(Vector3d &gyro_data, Vector3d &acc_data, V
         }
     }
     else {
+        printf("Here 0 \n\n");
         // 采用GPS数据更新经纬度和方位角
         double gps_speed         = gps_data(4);
         double gps_bearing       = gps_data(5);
@@ -171,6 +174,7 @@ void Location::PredictCurrentPosition(Vector3d &gyro_data, Vector3d &acc_data, V
         // 更新GPS方向和方向传感器Z轴方向, 当GPS可用且精度高时
         UpdateZaxisWithGPS(gps_data, ornt_filter);
         // 更新其他INS变量
+        // std::cout << "gps_count is:" << status.parameters.gps_count << std::endl;
         status.parameters.gps_count += 1;
         status.parameters.ins_count     = 0;
         status.parameters.ins_dist      = 0;
