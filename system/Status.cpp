@@ -120,7 +120,7 @@ void Status::Init()
     this->parameters.is_current_gps_valid       = true;
     this->parameters.gps_static_speed_threshold = 2.0;
     this->parameters.gps_count                  = 0;
-    this->parameters.gps_init_threshold         = 3;
+    this->parameters.gps_init_threshold         = 5;
     this->parameters.gps_pre_lng                = 0.0;
     this->parameters.gps_pre_lat                = 0.0;
     this->parameters.gps_pre_t                  = 0.0;

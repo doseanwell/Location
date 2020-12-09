@@ -198,7 +198,7 @@ void DataFormat::readCSV(std::string file_name, MatrixXd &gyro, MatrixXd &acc, M
 void DataFormat::readCSVOne(std::string s, Vector3d &gyro, Vector3d &acc, Vector3d &mag, VectorXd &gps_data,
                             Vector3d &g_data, Vector3d &ornt_data, Vector3d &road_data)
 {
-    cout << "sensor data: " << s << endl;
+    // cout << "sensor data: " << s << endl;
 
     vector<string> s_split;
     split(s, s_split, ",");
