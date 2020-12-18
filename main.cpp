@@ -22,7 +22,7 @@ using namespace Eigen;
 using namespace std;
 
 #define SERVER_IP "219.137.207.71"
-
+// #define SERVER_IP "172.16.23.106"
 #define MULTI_NAV_BUFF_NUM 1 * 1024 * 1024  // socket接收和发送缓存大小
 
 enum {
@@ -79,8 +79,8 @@ void service_handler(int32_t index_s, int32_t index_c, const uint8_t *dat, int32
     // }
 
     uint32_t i;
-    // printf("index_s is:%d;index_c is:%d\n", index_s, index_c);
-    // printf("dat is:%s\n", dat);
+    printf("index_s is:%d;index_c is:%d\n", index_s, index_c);
+    printf("dat is:%s\n", dat);
     // printf("tcp_client_index.index_c[index_c]:%d\n", tcp_client_index.index_c[index_c]);
     if (tcp_client_index.index_c[index_c] >= 0) {
         for (i = 0; i < len; i++) {
@@ -281,7 +281,7 @@ int main()
     // }
     while (1) {
         multi_nav_send_data(-1, tcp_client_index.index_c[ALGOR_BLH_INDEX_ENUM],
-                            (uint8_t *)"113.32067760,23.14982784\r\n", sizeof("113.32067760,23.14982784\r\n"));
+                            (uint8_t *)"23.14982784,113.32067760\r\n", sizeof("23.14982784,113.32067760\r\n"));
         sleep(1);
     }
 
